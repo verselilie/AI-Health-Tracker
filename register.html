@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AI Health Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <main class="login-container">
+        <div class="login-card">
+            <h1>💚 AI HEALTH TRACKER</h1>
+            <p class="login-subtitle">
+                Start your wellness journey.
+            </p>
+
+            <h2>Create Account</h2>
+            <p>Register to access your health tracker.</p>
+
+            <form id="register-form">
+                <label for="register-name">Full Name</label>
+                <input
+                    type="text"
+                    id="register-name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="register-email">Email</label>
+                <input
+                    type="email"
+                    id="register-email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="register-password">Password</label>
+                <input
+                    type="password"
+                    id="register-password"
+                    placeholder="Create a password (min. 6 characters)"
+                    minlength="6"
+                    required
+                >
+
+                <label for="register-confirm">Confirm Password</label>
+                <input
+                    type="password"
+                    id="register-confirm"
+                    placeholder="Repeat your password"
+                    minlength="6"
+                    required
+                >
+
+                <p id="register-message" role="status"></p>
+
+                <button type="submit">Create Account</button>
+            </form>
+
+            <p class="register-text">
+                Already have an account?
+                <a href="login.html">Login here</a>
+            </p>
+
+            <a class="back-home" href="index.html">
+                ← Back to Home
+            </a>
+        </div>
+    </main>
+
+    <script src="register.js"></script>
+</body>
+</html>

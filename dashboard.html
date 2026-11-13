@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="dashboard-page">
+
+    <aside class="sidebar">
+        <h2>💚 AI HEALTH TRACKER</h2>
+
+        <nav>
+            <a href="index.html">🏠 Home</a>
+            <a href="checkin.html">📝 Daily Check-in</a>
+            <a href="dashboard.html" class="active">📊 Dashboard</a>
+            <a href="dashboard.html#health-history">📅 Health History</a>
+            <a href="face-detection.html">📷 Face Detection</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="dashboard-container">
+
+
+        <h1>YOUR HEALTH TODAY 🌿</h1>
+
+        <p class="dashboard-subtitle">
+            Here's a look at your daily wellness.
+        </p>
+        
+        <p id="current-date"></p>
+
+        <div class="health-grid">
+
+            <div class="health-card">
+                <h3>😊 Mood</h3>
+                <p id="dashboard-mood">-</p>
+            </div>
+
+            <div class="health-card">
+                <h3>😴 Sleep</h3>
+                <p id="dashboard-sleep">-</p>
+            </div>
+
+            <div class="health-card">
+                <h3>💧 Water</h3>
+                <p id="dashboard-water">-</p>
+            </div>
+
+            <div class="health-card">
+                <h3>⚡ Energy</h3>
+                <p id="dashboard-energy">-</p>
+            </div>
+
+        </div>
+
+        <div class="symptoms-card">
+            <h3>📝 Symptoms or Complaints</h3>
+            <p id="dashboard-symptoms">-</p>
+        </div>
+        <div class="insight-card">
+            <h2>🤖 AI Health Insight</h2>
+
+            <p id="ai-insight">
+               Analyzing your daily wellness...
+            </p>
+        </div>
+
+        <button onclick="window.location.href='checkin.html'">
+            Back to Check-in
+        </button>
+        <button onclick="window.location.href='index.html'">
+            Back to Home
+        </button>
+
+    </div>
+
+    <section class="history-section">
+        <h2>📅 Health History</h2>
+        <div id="health-history">
+            <p>Your check-in history will appear here.</p>
+        </div>
+    
+    </section>
+
+    </main>
+
+
+
+<script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

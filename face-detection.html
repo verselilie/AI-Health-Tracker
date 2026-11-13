@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection - AI Health Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>💚 AI HEALTH TRACKER</h2>
+        <nav>
+            <a href="index.html">🏠 Home</a>
+            <a href="checkin.html">📝 Daily Check-in</a>
+            <a href="dashboard.html">📊 Dashboard</a>
+            <a href="dashboard.html#health-history">📅 Health History</a>
+            <a href="face-detection.html" class="active">📷 Face Detection</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <h1>FACE DETECTION 📷</h1>
+        <p>Explore facial expression recognition.</p>
+
+        <div class="insight-card">
+            <h2>😊 Expression Check</h2>
+
+            <div class="camera-container">
+                <h3>📷 Camera Preview</h3>
+
+                <video
+                    id="camera"
+                    autoplay
+                    playsinline
+                    muted
+                    style="width: 100%; max-width: 500px; border-radius: 15px;"
+                ></video>
+
+                
+<p id="camera-status">Camera has not started yet.</p>
+<p id="expression-status">AI model has not loaded yet.</p>
+
+<div class="expression-card">
+    <p class="expression-label">DETECTED EXPRESSION</p>
+    <p id="expression-result">Expression: Not detected</p>
+
+    <div class="score-header">
+        <span>Model score</span>
+        <span id="expression-score">--</span>
+    </div>
+
+    <div class="score-track">
+        <div id="expression-bar" class="score-fill"></div>
+    </div>
+
+    <p class="score-note">
+        AI score is an estimate, not a certainty about actual feelings.
+    </p>
+</div>
+
+
+                
+<button id="start-camera" type="button">
+    Start Camera
+</button>
+
+<button id="capture-photo" type="button" disabled>
+    📸 Capture & Analyze
+</button>
+
+<button id="stop-camera" type="button">
+    Stop Camera
+</button>
+
+<canvas id="captured-photo" hidden></canvas>
+
+            </div>
+
+            <p>
+                This feature lets you explore facial expressions
+                as an optional mood check.
+            </p>
+
+            <p>
+                Facial expressions cannot reliably determine your
+                true emotions or mental health.
+            </p>
+
+            <button onclick="window.location.href='checkin.html'">
+                Back to Daily Check-in
+            </button>
+        </div>
+    </main>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="face-detection.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

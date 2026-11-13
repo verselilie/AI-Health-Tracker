@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Check-in - AI Health Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="checkin-page">
+
+    
+<body class="checkin-page">
+
+    <aside class="sidebar">
+        <h2>💚 AI HEALTH TRACKER</h2>
+
+        <nav>
+            <a href="index.html">🏠 Home</a>
+            <a href="checkin.html" class="active">📝 Daily Check-in</a>
+            <a href="dashboard.html">📊 Dashboard</a>
+            <a href="dashboard.html#health-history">📅 Health History</a>
+            <a href="face-detection.html">📷 Face Detection</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="checkin-container">
+
+
+        <h1>DAILY CHECK-IN 📝</h1>
+
+        <p class="subtitle">
+            Take a moment to check in with yourself today.
+        </p>
+
+        <div class="question">
+            <h3>😊 How are you feeling today?</h3>
+
+            <div class="options">
+                <button class="mood-button" onclick="selectMood(this)">😊</button>
+                <button class="mood-button" onclick="selectMood(this)">😐</button>
+                <button class="mood-button" onclick="selectMood(this)">😔</button>
+                <button class="mood-button" onclick="selectMood(this)">😡</button>
+            </div>
+            </div>
+         <div class="question">
+            <h3>😴 How many hours did you sleep?</h3>
+
+            <input type="number" id="sleep" placeholder="Hours of sleep">
+        </div>
+
+        <div class="question">
+            <h3>💧 How much water did you drink?</h3>
+
+            <input type="number" id="water" placeholder="Glasses of water">
+        </div>
+
+        <div class="question">
+            <h3>⚡ How is your energy today?</h3>
+
+            <div class="options">
+                <button class="energy-button" onclick="selectEnergy(this)">Low</button>
+                <button class="energy-button" onclick="selectEnergy(this)">Normal</button>
+                <button class="energy-button" onclick="selectEnergy(this)">High</button>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>📝 Any symptoms or complaints?</h3>
+
+            <textarea id="symptoms" placeholder="Tell us how you feel..."></textarea>
+        </div>
+
+        <button class="submit-button" onclick="submitCheckin()">
+        SUBMIT CHECK-IN
+    </button>
+
+    </div>
+
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>
