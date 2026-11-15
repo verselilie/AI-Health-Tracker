@@ -1,7 +1,7 @@
 
 const loginForm = document.getElementById("login-form");
 
-loginForm.addEventListener("submit", function (event) {
+loginForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
     const email = document
@@ -12,28 +12,25 @@ loginForm.addEventListener("submit", function (event) {
     const password = document.getElementById("login-password").value;
     const message = document.getElementById("login-message");
 
-    const users = JSON.parse(
-        localStorage.getItem("healthUsers") || "[]"
-    );
+    message.textContent = "Logging in...";
 
-    const user = users.find(function (item) {
-        return item.email === email && item.password === password;
-    });
+    try {
+        await auth.signInWithEmailAndPassword(email, password);
 
-    if (!user) {
-        message.textContent = "Email or password is incorrect.";
-        return;
+        message.textContent = "Login successful!";
+
+        window.location.href = "dashboard.html";
+
+    } catch (error) {
+        if (
+            error.code === "auth/invalid-credential" ||
+            error.code === "auth/user-not-found" ||
+            error.code === "auth/wrong-password"
+        ) {
+            message.textContent = "Email or password is incorrect.";
+        } else {
+            message.textContent = "Login failed. Please try again.";
+            console.error(error);
+        }
     }
-
-    localStorage.setItem(
-        "healthCurrentUser",
-        JSON.stringify({
-            name: user.name,
-            email: user.email
-        })
-    );
-
-    message.textContent = "Login successful!";
-
-    window.location.href = "index.html";
 });

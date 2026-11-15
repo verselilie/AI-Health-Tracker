@@ -1,5 +1,6 @@
-const currentUser = localStorage.getItem("healthCurrentUser");
 
-if (!currentUser) {
-    window.location.replace("login.html");
-}
+auth.onAuthStateChanged(function (user) {
+    if (!user) {
+        window.location.replace("login.html");
+    }
+});
